@@ -1,0 +1,161 @@
+*{
+	padding:0;
+	margin:0;
+	outline:none;
+}
+body{
+	background: url(../img/fundo_login.jpg) no-repeat fixed 100% 100%;
+    background-position: center center;
+    background-size: cover;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+}
+.form_login{
+	color: white;
+	margin-top: 20%;
+	width: 35%;
+	background: rgba(0,0,0,0.6);
+	padding:0.1px 50px 30px;
+	border-radius: 20px;
+}
+.logos{
+	padding: 20px 0 0;
+}
+.form_login h2{
+	margin:20px;
+}
+.alerta{
+	width: 35%;
+}
+.versao{
+	position: relative;
+	top: 25px;
+}
+.desenvolvedor{
+	position: relative;
+	top: 20px;
+}
+footer{
+	margin: 50px 0 10px;
+}
+td input[type="text"]{
+	background: transparent;
+	border: none;
+	width: 100%;
+}
+
+.navegacao{
+	margin-top: 50px;
+}
+
+.adicionaVisitante{
+	width: 100%;
+}
+
+a.paginacao{
+	width: 30px;
+	background: #DDD;
+	border: thin solid #BBB;
+	margin: 3px;
+	padding: 10px;
+	color: #333;
+}
+
+a.ativo{
+	width: 30px;
+	background: #337ab7;
+	border: thin solid #BBB;
+	margin: 3px;
+	padding: 10px;
+	color: white;
+}
+
+a.paginacao:hover{
+	width: 30px;
+	background: #337ab7;
+	margin: 3px;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+}
+/*/ Admin /*/
+	body.admin{
+		background: #ededed;
+	}
+	.locais-admin{
+		padding: 20px 0;
+		background: #049b3c;
+		width: 100%;
+	}
+	.esquerda img{
+		width: 50%;
+	}
+	.direita img{
+		width: 35%;
+	}
+	.guia{
+		padding: 20px 20px 10px;
+		background: #DDD;
+	}
+	.menu_admin{
+		margin: 30px 0;
+		width: 90%;
+	}
+	thead{
+		text-align: center;
+	}
+	tbody{
+		text-align: center;
+	}
+	.col-lg-3{
+		padding-left: 0;
+	}
+	.nav-stacked > li{
+		cursor: pointer;
+	}
+	.titulo{
+		width: 100%;
+		margin: 60px 0 10px;
+	}
+	.titulo2{
+		width: 100%;
+		margin: 30px 0;
+	}
+	.tabela thead{
+		background: #337ab7;
+		color: white;
+	}
+	form{
+		display: inline;
+	}
+
+/*/ Confirmação de Exclusão /*/
+	.confirmacaoExclusao{
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.8);
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding: 20px;
+		display: none;
+	}
+	.infoConf{
+		width: 30%;
+		padding: 20px;
+		background: #DDD;
+		text-align: center;
+		border-radius: 20px;
+		margin: 15% 35%;
+	}
+	.infoConf h2{
+		margin: 10px 0 0;
+	}
+	.infoConf p{
+		margin: 30px 0 ;
+	}
+	p.botao{
+		margin: 5px 0;
+	}
