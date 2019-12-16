@@ -1,18 +1,14 @@
 <?php 
 	require_once("conexao.php");
-
 	function buscaUsuario($con, $login, $senha, $local){
-
 		$senhaMd5 = md5($senha);
 		$login = mysqli_real_escape_string($con, $login);
-
 		$query = "SELECT u.*, l.* FROM port_usuarios AS u
 		JOIN port_local AS l
 		WHERE u.login='{$login}' AND 
 			  u.senha='{$senhaMd5}' AND 
 			  l.id_local='{$local}' 
 		LIMIT 1";
-
 		$resultado = mysqli_query($con, $query);
 		$usuario = mysqli_fetch_assoc($resultado);
 

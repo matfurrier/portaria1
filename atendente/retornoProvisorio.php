@@ -38,7 +38,8 @@
 							<td>Documento do visitante</td>
 							<td>Telefone do visitante</td>
 							<td>Autorização</td>
-							<td>Empresa/Área</td>
+							<td>Empresa</td>
+							<td>Área</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -60,6 +61,7 @@
 								<td><?= $atendimento->getCpfVisitante() ?></td>
 								<td><?= $atendimento->getTelefoneVisitante() ?></td>
 								<td><?= $atendimento->getAlfa() ?></td>
+								<td><?= $atendimento->getEmpresaVisitante() ?></td>
 								<td><?= $atendimento->getAreaVisitada() ?></td>
 							</tr>
 						<?php 

@@ -21,12 +21,16 @@ $atendimento->setIdUsuario($atendente);
 
 $atendimentoDao = new AtendimentoDao($con);
 
-if ($atendimentoDao->insereAtendimento($atendimento)) {
+if ($atendimentoDao->insereAtendimento($atendimento)){
 	$_SESSION["success"] = "O atendimento foi iniciado!";
-	header("Location: home.php");
+	echo "<script>";
+		echo "window.location.href = 'http://localhost/portaria/atendente/home.php';";
+	echo "</script>";
 }else{
 	$_SESSION["danger"] = "Não foi possível iniciar atendimento!<br>".mysqli_error($con);
-	header("Location: home.php");
+	echo "<script>";
+		echo "window.location.href = 'http://localhost/portaria/atendente/home.php';";
+	echo "</script>";
 }
 
 ?>

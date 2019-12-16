@@ -6,8 +6,6 @@ $endereco 		= $_POST['endereco'];
 $telefone 		= $_POST['telefone'];
 $responsavel 	= $_POST['responsavel'];
 
-//echo $nome." - ".$telefone." - ".$endereco." - ".$responsavel;
-
 $local = new Local($nome, $telefone, $endereco, $responsavel);
 $localDao = new LocalDao($con);
 

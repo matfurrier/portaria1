@@ -33,7 +33,7 @@
 
 			<input type="hidden" name="idDoUsuario" value="<?= $_SESSION['idDoUsuario'] ?>">
 			<input type="hidden" name="localId" value="<?= $_SESSION['localId'] ?>">
-			<input type="hidden" name="tipo" value="provisorio">
+			<input type="hidden" name="tipo" value="0">
 
 			<div class="col-lg-3">
 				<label for="cracha">Número do crachá:</label><br>

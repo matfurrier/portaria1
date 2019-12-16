@@ -1,5 +1,4 @@
 <?php
-
 class Usuario{
 	private $id;
 	private $nome;
@@ -7,7 +6,6 @@ class Usuario{
 	private $senha;
 	private $matricula;
 	private $tipo;
-
 	function __construct($nome, $login, $senha, $matricula, $tipo){
 		$this->nome = $nome;
 		$this->login = $login;
@@ -15,7 +13,6 @@ class Usuario{
 		$this->matricula = $matricula;
 		$this->tipo = $tipo;
 	}
-
 	public function getId(){
 		return $this->id;
 	}

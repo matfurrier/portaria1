@@ -5,11 +5,9 @@ $nome 			= $_POST['nome'];
 $login 			= $_POST['login'];
 $senhaS 		= $_POST['senha'];
 $matricula		= $_POST['matricula'];
-$tipo 			= "Atendente";
+$tipo 			= 1;
 
 $senha = md5($senhaS);
-
-//echo $nome." - ".$login." - ".$senha." - ".$matricula." - ".$tipo;
 
 $atendente = new Usuario($nome, $login, $senha, $matricula, $tipo);
 $atendenteDao = new UsuarioDao($con);

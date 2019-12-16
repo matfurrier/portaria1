@@ -1,13 +1,9 @@
 <?php 
-
 class LocalDao{
-	
 	private $con;
-
 	function __construct($con) {
 		$this->con = $con;
 	}
-
 	function listaLocal(){
 		$locais = array();
 		$resultado = mysqli_query($this->con, "SELECT * FROM port_local ORDER BY nome_local ASC");
@@ -26,14 +22,12 @@ class LocalDao{
 		}
 		return $locais;
 	}
-
 	function insereLocal(Local $local){
 		$query = "INSERT INTO port_local (`id_local`, `nome_local`, `telefone_local`, `endereco_local`, `responsavel`)
 		VALUES (NULL, '{$local->getNome()}', '{$local->getTelefone()}', '{$local->getEndereco()}', '{$local->getResponsavel()}')";
 
 		return mysqli_query($this->con, $query);
 	}
-	
 	function alteraLocal(Local $local){
 		$query = "UPDATE port_local 
 				  SET nome_local = '{$local->getNome()}',
@@ -44,7 +38,6 @@ class LocalDao{
 
 		return mysqli_query($this->con, $query);
 	}
-
 	function excluiLocal (Local $local){
 		$query = "DELETE FROM port_local WHERE id_local = '{$local->getId()}'";
 		return mysqli_query($this->con, $query);

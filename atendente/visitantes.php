@@ -32,7 +32,7 @@
 
 			<input type="hidden" name="idDoUsuario" value="<?= $_SESSION['idDoUsuario'] ?>">
 			<input type="hidden" name="localId" value="<?= $_SESSION['localId'] ?>">
-			<input type="hidden" name="tipo" value="visitante">
+			<input type="hidden" name="tipo" value="1">
 
 			<div class="col-lg-3">
 				<label for="cracha">Número do crachá:</label><br>
@@ -99,25 +99,24 @@
 						$atendimentoDao = new AtendimentoDao($con);
 						$atendimentos = $atendimentoDao->listaAtendimentoAtendenteVisitantes();
 						foreach($atendimentos as $atendimento) :
-
-							if($atendimento->getStatus() == 0){
+							if(count($atendimentos) >= 1){
+					?>
+								<tr>
+									<td><?= $atendimento->getCracha() ?></td>
+									<td><?= $atendimento->getNomeVisitante() ?></td>
+									<td><?= $atendimento->getEmpresaVisitante() ?></td>
+									<td><?= $atendimento->getCpfVisitante() ?></td>
+									<td><?= $atendimento->getTelefoneVisitante() ?></td>
+									<td><?= $atendimento->getAlfa() ?></td>
+									<td><?= $atendimento->getAreaVisitada() ?></td>
+								</tr>
+					<?php 
+							}else{
 								echo "<tr>";
 									echo "<td>Ainda não há atendimento neste local.</td>";
 								echo "</tr>";
-							}else{
-					?>
-						<tr>
-							<td><?= $atendimento->getCracha() ?></td>
-							<td><?= $atendimento->getNomeVisitante() ?></td>
-							<td><?= $atendimento->getEmpresaVisitante() ?></td>
-							<td><?= $atendimento->getCpfVisitante() ?></td>
-							<td><?= $atendimento->getTelefoneVisitante() ?></td>
-							<td><?= $atendimento->getAlfa() ?></td>
-							<td><?= $atendimento->getAreaVisitada() ?></td>
-						</tr>
-					<?php 
 							}
-						endforeach 
+						endforeach;
 					?>
 				</tbody>
 			</table>

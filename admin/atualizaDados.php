@@ -20,8 +20,6 @@ if ($senhaNova == "") {
 	$senha = md5($senhaNova);
 }
 
-//echo $id." - ".$nome." - ".$login." - ".$matricula." - ".$senha." - ".$tipo;
-
 $usuario = new Usuario($nome, $login, $senha, $matricula, $tipo);
 	$usuario->setId($id);
 
